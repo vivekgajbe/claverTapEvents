@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ftb-Ei-Vsf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Test1ViewController-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="Test1ViewController" id="BYZ-38-t0r" userLabel="Test1ViewController" customClass="Test1ViewController" customModule="iosAnalyticsTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Gc-J3-8NV">
+                                <rect key="frame" x="20" y="345" width="374" height="260"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Initial Text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JL5-1f-6yC" customClass="VGTextField" customModule="iosAnalyticsTest" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="20" width="334" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="nEb-c1-3BT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="dvI-yT-5Gc"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Targeted text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P4z-v3-j6t" customClass="VGTextField" customModule="iosAnalyticsTest" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="80" width="334" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="lPR-QA-blL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="7X9-1M-GyT"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50S-w1-pKV">
+                                        <rect key="frame" x="20" y="130" width="334" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="vTx-qI-y0f"/>
+                                        </constraints>
+                                        <state key="normal" title="Check"/>
+                                        <connections>
+                                            <action selector="btnCheckRepeatTextWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q4i-iH-Yvc"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter initial text and targeted text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAM-Nn-0Mw">
+                                        <rect key="frame" x="20" y="180" width="334" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="JL5-1f-6yC" secondAttribute="trailing" constant="20" id="367-0p-0io"/>
+                                    <constraint firstItem="50S-w1-pKV" firstAttribute="leading" secondItem="7Gc-J3-8NV" secondAttribute="leading" constant="20" id="6O9-F0-gmO"/>
+                                    <constraint firstAttribute="bottom" secondItem="qAM-Nn-0Mw" secondAttribute="bottom" constant="20" id="GoH-gt-vVs"/>
+                                    <constraint firstAttribute="height" constant="260" id="HjK-rf-cvS"/>
+                                    <constraint firstAttribute="trailing" secondItem="qAM-Nn-0Mw" secondAttribute="trailing" constant="20" id="Qsa-1v-Ijy"/>
+                                    <constraint firstItem="50S-w1-pKV" firstAttribute="top" secondItem="P4z-v3-j6t" secondAttribute="bottom" constant="10" id="Wfg-kd-W9y"/>
+                                    <constraint firstItem="qAM-Nn-0Mw" firstAttribute="leading" secondItem="7Gc-J3-8NV" secondAttribute="leading" constant="20" id="agw-by-FIG"/>
+                                    <constraint firstItem="JL5-1f-6yC" firstAttribute="leading" secondItem="7Gc-J3-8NV" secondAttribute="leading" constant="20" id="fHh-Tf-d8h"/>
+                                    <constraint firstItem="P4z-v3-j6t" firstAttribute="top" secondItem="JL5-1f-6yC" secondAttribute="bottom" constant="20" id="im2-YM-V9V"/>
+                                    <constraint firstItem="qAM-Nn-0Mw" firstAttribute="top" secondItem="50S-w1-pKV" secondAttribute="bottom" constant="10" id="juB-dn-uMC"/>
+                                    <constraint firstAttribute="trailing" secondItem="P4z-v3-j6t" secondAttribute="trailing" constant="20" id="kvI-w0-bsl"/>
+                                    <constraint firstItem="JL5-1f-6yC" firstAttribute="top" secondItem="7Gc-J3-8NV" secondAttribute="top" constant="20" id="xRl-1W-1yL"/>
+                                    <constraint firstAttribute="trailing" secondItem="50S-w1-pKV" secondAttribute="trailing" constant="20" id="xx0-gN-EG3"/>
+                                    <constraint firstItem="P4z-v3-j6t" firstAttribute="leading" secondItem="7Gc-J3-8NV" secondAttribute="leading" constant="20" id="zAz-k6-Thw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7Gc-J3-8NV" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="2Ql-Ir-c61"/>
+                            <constraint firstItem="7Gc-J3-8NV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="COp-Vw-u4U"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Gc-J3-8NV" secondAttribute="trailing" constant="20" id="IxJ-W0-9sy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BaJ-cf-8QY"/>
+                    <connections>
+                        <outlet property="lblErrorText" destination="qAM-Nn-0Mw" id="FFg-w6-gxL"/>
+                        <outlet property="txtInitialText" destination="JL5-1f-6yC" id="7m3-gY-Z7r"/>
+                        <outlet property="txtTargetedText" destination="P4z-v3-j6t" id="F6g-9O-gB0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="115.84821428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zFd-8V-w9a">
+            <objects>
+                <viewController id="hMr-9s-Kxm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LOf-D7-cvC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBW-zK-NIq">
+                                <rect key="frame" x="20" y="400" width="374" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJH-8t-35q" customClass="VGButton" customModule="iosAnalyticsTest" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="10" width="354" height="50"/>
+                                        <color key="backgroundColor" red="1" green="0.42352941179999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="jEA-ct-64R"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Test Assignment: Part A">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.20000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="2" height="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="zAC-EP-uG7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoZ-DF-tOu" customClass="VGButton" customModule="iosAnalyticsTest" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="80" width="354" height="50"/>
+                                        <color key="backgroundColor" red="1" green="0.42352941179999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="snt-40-lvO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Test Assignment: Part B">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.20000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="2" height="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="BX8-2a-tkl" kind="show" id="98K-ZH-CTy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="XoZ-DF-tOu" secondAttribute="trailing" constant="10" id="0RC-hK-Lag"/>
+                                    <constraint firstAttribute="trailing" secondItem="JJH-8t-35q" secondAttribute="trailing" constant="10" id="53X-qm-hZM"/>
+                                    <constraint firstItem="JJH-8t-35q" firstAttribute="leading" secondItem="bBW-zK-NIq" secondAttribute="leading" constant="10" id="D8D-VY-a12"/>
+                                    <constraint firstItem="JJH-8t-35q" firstAttribute="top" secondItem="bBW-zK-NIq" secondAttribute="top" constant="10" id="Dpo-aG-QPS"/>
+                                    <constraint firstItem="XoZ-DF-tOu" firstAttribute="top" secondItem="JJH-8t-35q" secondAttribute="bottom" constant="20" id="EvH-Vm-VXc"/>
+                                    <constraint firstAttribute="height" constant="150" id="H4e-cJ-rau"/>
+                                    <constraint firstItem="XoZ-DF-tOu" firstAttribute="leading" secondItem="bBW-zK-NIq" secondAttribute="leading" constant="10" id="zy0-PI-HX4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bBW-zK-NIq" firstAttribute="leading" secondItem="WfB-bx-nKl" secondAttribute="leading" constant="20" id="K0W-kH-vnw"/>
+                            <constraint firstItem="WfB-bx-nKl" firstAttribute="trailing" secondItem="bBW-zK-NIq" secondAttribute="trailing" constant="20" id="Wbc-sX-mVb"/>
+                            <constraint firstItem="bBW-zK-NIq" firstAttribute="centerY" secondItem="WfB-bx-nKl" secondAttribute="centerY" id="Zyu-YF-WBk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WfB-bx-nKl"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="G1J-Sz-g97"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M8N-C9-VHS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="208.69565217391306" y="115.84821428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="t3C-Cy-UGc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ftb-Ei-Vsf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LVs-RT-r0q">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hMr-9s-Kxm" kind="relationship" relationship="rootViewController" id="3BV-US-izY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5gc-LU-hfQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-701.44927536231887" y="115.84821428571428"/>
+        </scene>
+        <!--Test2ViewController-->
+        <scene sceneID="ZDk-bV-knr">
+            <objects>
+                <viewController storyboardIdentifier="Test2ViewController" id="BX8-2a-tkl" userLabel="Test2ViewController" customClass="Test2ViewController" customModule="iosAnalyticsTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UZ3-WH-uZZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBg-Zb-7Dl" customClass="VGButton" customModule="iosAnalyticsTest" customModuleProvider="target">
+                                <rect key="frame" x="20" y="148" width="374" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.42352941179999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="RdC-P1-D76"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Record Event">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="2" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnRecordEvent:" destination="BX8-2a-tkl" eventType="touchUpInside" id="u6d-lM-rKq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQB-b2-82W" customClass="VGButton" customModule="iosAnalyticsTest" customModuleProvider="target">
+                                <rect key="frame" x="20" y="218" width="374" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.42352941179999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="T8q-8d-HHU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Record Event With Properties">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="2" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnRecordEventWithProperties:" destination="BX8-2a-tkl" eventType="touchUpInside" id="yzN-vj-9EK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Wj-qP-m33" customClass="VGButton" customModule="iosAnalyticsTest" customModuleProvider="target">
+                                <rect key="frame" x="20" y="288" width="374" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.42352941179999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="rk4-a6-eq8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Record Chared Event">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="2" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnRecordCharedEvent:" destination="BX8-2a-tkl" eventType="touchUpInside" id="0hs-VQ-XHG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDa-bH-AbW" customClass="VGButton" customModule="iosAnalyticsTest" customModuleProvider="target">
+                                <rect key="frame" x="20" y="358" width="374" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.42352941179999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="KCj-lt-MD6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Open App Inbox">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="2" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnOpenAppInbox:" destination="BX8-2a-tkl" eventType="touchUpInside" id="ncO-sd-9s5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1m-vD-6RR" customClass="VGButton" customModule="iosAnalyticsTest" customModuleProvider="target">
+                                <rect key="frame" x="20" y="428" width="374" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.42352941179999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Rb1-C0-0i7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Push Profile Event">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="2" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnPushProfileEvent:" destination="BX8-2a-tkl" eventType="touchUpInside" id="EPO-Xk-WMB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="i1m-vD-6RR" firstAttribute="leading" secondItem="m9g-hj-krG" secondAttribute="leading" constant="20" id="1Q7-vd-bH0"/>
+                            <constraint firstItem="m9g-hj-krG" firstAttribute="trailing" secondItem="bQB-b2-82W" secondAttribute="trailing" constant="20" id="Bom-Zt-KOW"/>
+                            <constraint firstItem="m9g-hj-krG" firstAttribute="trailing" secondItem="i1m-vD-6RR" secondAttribute="trailing" constant="20" id="Cg8-rR-mxT"/>
+                            <constraint firstItem="XDa-bH-AbW" firstAttribute="top" secondItem="2Wj-qP-m33" secondAttribute="bottom" constant="20" id="Cjw-bb-d04"/>
+                            <constraint firstItem="bQB-b2-82W" firstAttribute="leading" secondItem="m9g-hj-krG" secondAttribute="leading" constant="20" id="Qxe-0z-JsZ"/>
+                            <constraint firstAttribute="trailing" secondItem="UBg-Zb-7Dl" secondAttribute="trailing" constant="20" id="Tif-8d-gfV"/>
+                            <constraint firstItem="UBg-Zb-7Dl" firstAttribute="top" secondItem="m9g-hj-krG" secondAttribute="top" constant="60" id="TyO-dF-XyU"/>
+                            <constraint firstItem="i1m-vD-6RR" firstAttribute="top" secondItem="XDa-bH-AbW" secondAttribute="bottom" constant="20" id="Z7I-HU-Xea"/>
+                            <constraint firstItem="2Wj-qP-m33" firstAttribute="top" secondItem="bQB-b2-82W" secondAttribute="bottom" constant="20" id="Zis-8B-0kF"/>
+                            <constraint firstItem="m9g-hj-krG" firstAttribute="trailing" secondItem="2Wj-qP-m33" secondAttribute="trailing" constant="20" id="i9D-eE-Ha4"/>
+                            <constraint firstItem="m9g-hj-krG" firstAttribute="trailing" secondItem="XDa-bH-AbW" secondAttribute="trailing" constant="20" id="iFd-cy-uNt"/>
+                            <constraint firstItem="bQB-b2-82W" firstAttribute="top" secondItem="UBg-Zb-7Dl" secondAttribute="bottom" constant="20" id="p1V-fG-kUa"/>
+                            <constraint firstItem="UBg-Zb-7Dl" firstAttribute="leading" secondItem="UZ3-WH-uZZ" secondAttribute="leading" constant="20" id="qCY-Te-GCr"/>
+                            <constraint firstItem="2Wj-qP-m33" firstAttribute="leading" secondItem="m9g-hj-krG" secondAttribute="leading" constant="20" id="wFG-ht-zQh"/>
+                            <constraint firstItem="XDa-bH-AbW" firstAttribute="leading" secondItem="m9g-hj-krG" secondAttribute="leading" constant="20" id="zhv-US-IXR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="m9g-hj-krG"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ey2-9G-Ua7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1dA-gp-gCl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="709" y="856"/>
+        </scene>
+    </scenes>
+</document>

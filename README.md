@@ -7,7 +7,7 @@ Here is ios integration refrence taken
 https://developer.clevertap.com/docs/ios
 
 As per Clevertap has below types of event tracking 
--Record Event 
+-Record Event
 -Record Event with Properties
 -Record Charged Event
 -Open App Inbox 
